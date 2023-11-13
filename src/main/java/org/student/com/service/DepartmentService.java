@@ -1,6 +1,8 @@
 package org.student.com.service;
 
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import org.student.com.entity.Department;
@@ -14,10 +16,12 @@ public class DepartmentService {
 	public DepartmentService(DepartmentRepository departmentRepository) {
 		this.departmentRepository=departmentRepository;
 	}
-	
-	
 	public Department createOrUpdateDepartment(Department department){
 		return departmentRepository.save(department);
+	}
+	
+	public List<Department>getDepartments(){
+		return departmentRepository.findAll();
 	}
 	
 
