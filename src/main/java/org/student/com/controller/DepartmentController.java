@@ -47,11 +47,11 @@ public class DepartmentController {
 	public List<Department>getAllDepartments(){
 		return departmentService.getDepartments();
 	}
-	@DeleteMapping(path = "/deleteById")
+	@DeleteMapping(path = "/deleteById/{id}")
 	public ResponseEntity<?>deleteDepartment(Long id){
 		return departmentService.deleteById(id);
 	}
-	@GetMapping(path = "/getById")
+	@GetMapping(path = "/getById/{id}")
 	public Department getDepartmentById(Long id) {
 		return departmentService.getDepartmentById(id);
 	}
