@@ -40,5 +40,14 @@ public class DepartmentService {
 		}
 		
 	}
+	public Department getDepartmentById(Long id) {
+		Department department = departmentRepository.findById(id).get();
+		if(department !=null) {
+			return department;
+		}
+		else {
+			return null;
+		}
+	}
 
 }
